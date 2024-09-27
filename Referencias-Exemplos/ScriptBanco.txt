@@ -1,0 +1,21 @@
+drop database banco;
+create database banco;
+use banco;
+
+create table contas(
+id int(5) not null auto_increment,
+nome varchar(25) not null,
+usuario varchar(20) not null,
+senha varchar(20) not null,
+saldo decimal(8,2) not null,
+primary key(id));
+
+insert into contas() values (1,"Douglas Mendes Mariano","douglas","123",1542.89);
+insert into contas() values (2,"Jorge da Silva","jorge","1234",52355);
+insert into contas() values (3,"Vanessa de Menezes","vanessa","123",698.12);
+insert into contas() values (4,"Luiz Aguiar","luiz","789",9856.47);
+insert into contas() values (5,"Fábio Medeiros","fabio","456",12.45);
+
+desc contas;
+
+select * from contas;
