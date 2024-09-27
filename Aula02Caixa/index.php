@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+    //EM ANÁLISE E MANUTENÇÃO
         //Atribuição de Informações á Matriz e Váriaveis.
         $usuario = array [jose, carlos, marcela, maria, laura]; //Referente ao nome de usuario.
         $senha = array [111, 222, 333, 444, 555]; //Referente a senha do usuário.
