@@ -7,7 +7,7 @@
 </head>
 <body>  
     <?php //Abre o código PHP.
-        include("conexao.php"); //Insere no arquivo atual o código presente no arquivo indicado.
+        include("connection.php"); //Insere no arquivo atual o código presente no arquivo indicado.
         //Neste caso, o códido de 'connection.php' está sendo inserido neste arquivo através do comando include.
         
         //Declaração de Váriaveis.
@@ -23,9 +23,9 @@
         // ! inverte o valor retornado pela função 'empty()'.
         //$_POST é uma superglobal de PHP. No caso, o valor da chave 'selecionarCliente' está sendo acessado.
         {
-            $select = "SELECT * FROM contas WHERE id=".$_POST['id']; //Puxa o a função do Banco de Dados através de um comando MySQL.
-            $dado = $conn -> query($select); //A váriavel '$dado' armazena o resultado da consulta feita no banco de dados ($conn -> query($select)).
-            // A váriavel '$conn' representa a conexão do arquivo com o banco de dados. Conn de Connection.
+            $sql = "SELECT * FROM contas WHERE id=".$_POST['id']; //Puxa o a função do Banco de Dados através de um comando MySQL.
+            $dado = $conn -> query($sql); //A váriavel '$dado' armazena o resultado da consulta feita no banco de dados ($conn -> query($select)).
+            // A váriavel '$conn' representa a conexão do arquivo com o banco de dados. Conn de Connection. Verificar Linha 8 em 'connection.php'.
             // -> É o operador 'seta'; T_OBJECT_OPERATOR (de acordo com o manual); Serve para acessar propriedades/métodos de um objeto.
             // O método 'query' é utilizado para executar uma consulta SQL, ou seja, no Banco de Dados.
             
