@@ -57,7 +57,7 @@
                 $this->agencia = $agencia;
             }
 
-            public function setAgencia()
+            public function getAgencia()
             {
                 return $this->agencia;
             }
@@ -67,11 +67,44 @@
                 $this->titular = $titular;
             }
 
-            public function setTitular()
+            public function getTitular()
             {
                 return $this->titular;
             }
         }
+
+            $objAgencia = new Agencia();
+            $objAgencia->nome = 'VL Mariana - VLM';
+            $objAgencia->telefone = '4002-8922';
+
+            $objTitular = new Titular();
+            $objTitular->setDados
+            ([
+                'nome' => 'Aline dos Santos',
+                'celular' => '96203-9987'
+            ]);
+
+            $objConta = new Contas();
+            $objConta->setAgencia($objAgencia);
+            $objConta->setTitular($objTitular);
+            $objConta->saldo = 500;
+
+            echo '<pre>';
+            var_dump($objAgencia);
+            echo '<hr>';
+            var_dump($objTitular);
+            echo '<hr>';
+            var_dump($objConta);
+            echo '<hr>';
+            var_dump($objConta->getAgencia());
+            echo '<hr>';
+
+            echo '#############';
+            echo '<hr>';
+            echo 'Agencia: '.$objConta->getAgencia()->getNome().' - '.$objConta->getAgencia()->getTelefone().'<br>';
+            echo 'Titular: '.$objConta->getTitular()->getNome().' - '.$objConta->getTitular()->getCelular().'<br>';
+            echo 'Saldo: '.$objConta->saldo;
+        
     ?>
 </body>
 </html>
