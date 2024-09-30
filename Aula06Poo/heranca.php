@@ -28,6 +28,16 @@
                 return $this->saldo;
             }
         }
+
+        class ContaPoupança extends Contas
+        {
+            public $aniversario = 10;
+            public function aplicar ($valor)
+            {
+                echo "<hr> Aplicação Efetuada <b> $valor </b></hr>";
+                $this->depositar($valor);
+            }
+        }
     ?>
 </body>
 </html>
