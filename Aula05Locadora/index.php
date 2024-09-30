@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php //Abre código PHP.
-        include ("conection.php"); //Conecta com o Banco de Dados.
+        include ("connection.php"); //Conecta com o Banco de Dados.
         //Com esse comando é possível inserir o código de outro arquivo no arquivo atual.
 
         //Seleciona as informações da tabela de 'produtos' no Banco de Dados através de um comando MySQL.
@@ -53,7 +53,7 @@
                             echo "<td>".$user_data['produtora']."</td>";
                             echo "<td>".$user_data['valor']."</td>";
                             echo "<td>".$user_data['id']."</td>";
-                        echo "</tr>"
+                        echo "</tr>";
                     }
                 ?>
             </tbody>
