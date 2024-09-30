@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        class Contas
+        class Contas 
         {
             public $saldo;
             public $titular;
@@ -33,6 +33,26 @@
                 return $this->saldo;
             }
         }
+
+        $conta1 = new Contas();
+        $conta2 = new Contas();
+
+        $conta1->titular = 'Luciana de Souza Lima';
+        $conta2->titular = 'Aline de Oliveira';
+
+        $conta1->depositar(500);
+        $conta2->depositar(1000);
+
+        echo '<pre>';
+        var_dump($conta1);
+        echo '<hr>';
+        var_dump($conta2);
+
+        echo '<hr>';
+        echo 'Saldo Atual em Conta: '.$conta1->verSaldo();
+        echo '<br>';
+        echo 'Saldo Atual em Conta: '.$conta2->verSaldo();
+
     ?>
 </body>
 </html>
