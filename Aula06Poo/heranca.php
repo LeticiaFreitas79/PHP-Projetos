@@ -38,6 +38,25 @@
                 $this->depositar($valor);
             }
         }
-    ?>
+
+        class ContaPoupançaConjunta extends ContaPoupanca
+        {
+
+        }
+
+        $conta = new Contas();
+        $conta->depositar(1200);
+
+        $contaPoupanca = new ContaPoupanca();
+        $contaPoupanca->aplicar(2000);
+        $contaPoupancaConjunta = new ContaPoupancaConjunta();
+        
+        echo '<pre>';
+        var_dump($conta);
+        var_dump($contaPoupança);
+        echo '<hr>';
+        var_dump($contaPoupancaConjunta);
+        
+        ?>
 </body>
 </html>
