@@ -49,9 +49,25 @@
         var_dump($conta2);
 
         echo '<hr>';
-        echo 'Saldo Atual em Conta: '.$conta1->verSaldo();
+        echo 'Saldo Atual em Conta1: '.$conta1->verSaldo();
         echo '<br>';
-        echo 'Saldo Atual em Conta: '.$conta2->verSaldo();
+        echo 'Saldo Atual em Conta2: '.$conta2->verSaldo();
+
+
+        echo '<hr>';
+        $conta1->sacar(400);
+        $conta2->sacar(600);
+
+        echo '<hr>';
+        echo 'Saldo Atual em Conta1: '.$conta1->verSaldo();
+        echo '<br>';
+        echo 'Saldo Atual em Conta2: '.$conta2->verSaldo();
+
+        echo '<hr>';
+        echo 'Titular sa Conta1: '.$conta1->titular;
+        echo '<br>';
+        echo 'Titular sa Conta2: '.$conta2->titular;
+
 
     ?>
 </body>
