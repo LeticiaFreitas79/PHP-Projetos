@@ -8,11 +8,14 @@
 </head>
 <body>
     <?php
+        //Criando a classe 'Contas'
         class Contas
         {
+            //Declaração de váriaveis públicas.
             public $saldo = 0;
             public $titular;
 
+            //Criando funções.
             public function sacar($valor)
             {
                 $this->saldo -= $valor;
@@ -29,6 +32,7 @@
             }
         }
 
+        //Criando uma extenção da classe 'Contas'.
         class ContaPoupança extends Contas
         {
             public $aniversario = 10;
