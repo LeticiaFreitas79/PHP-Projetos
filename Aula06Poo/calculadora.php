@@ -10,41 +10,42 @@
     <?php
         class Calculadora
         {
-            public $num1;
-            public $num2;
-            
+
             //Método para realizar a soma de dois números.
             public function somar($num1, $num2)
             {
-                echo "<hr> O resultado da soma dos dois números é: <b> $resultado </b></hr>";
-                $resultado = $num1 + $num2;
+                echo "A soma de $num1 e $num2 é: ".$num1+$num2;
+                echo '<hr>';
             }
 
             //Método para realizar a subtração de dois números.
             public function subtrair($num1, $num2)
             {
-                echo "<hr> O resultado da subtração dos dois números é: <b> $resultado </b></hr>";
-                $resultado = $num1 - $num2;
+                echo "A subtração de $num1 e $num2 é: ".$num1-$num2;
+                echo '<hr>';
             }
 
             //Método para realizar a divisão de dois números.
             public function dividir($num1, $num2)
             {
-                echo "<hr> O resultado da divisão dos dois números é: <b> $resultado </b></hr>";
-                $resultado = $num1 / $num2;
+                echo "A divisão de $num1 e $num2 é: ".$num1/$num2;
+                echo '<hr>';
             }
 
             //Método para realizar a multiplicação de dois números.
             public function multiplicar($num1, $num2)
             {
-                echo "<hr> O resultado da multiplicação dos dois números é: <b> $resultado </b></hr>";
-                $resultado = $num1 * $num2;
+                echo "A multiplicação de $num1 e $num2 é: ".$num1+$num2;
+                echo '<hr>';
             }
         }
+
+        $calculadora = new Calculadora();
+        $calculadora->somar(4,5);
+        $calculadora->subtrair(47,25);
+        $calculadora->dividir(16,4);
+        $calculadora->multiplicar(21,45);
     ?>
-    <form action="calculadora.php" method="POST">
-        Primeiro Número: <input type="text" name="num1"><br>
-        Segundo Número: <input type="text" name="num2"><br>
-    </form>
+    
 </body>
 </html>
