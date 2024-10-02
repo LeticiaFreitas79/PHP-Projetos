@@ -1,3 +1,5 @@
+<!--Status do Código: em análise-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,12 +20,12 @@
         $update = "UPDATE usuario SET
             nome = '$nome',
             email = '$email',
-            senha = '$senha',
+            senha = '$senha'
             where email = '$emailAntigo'
         ";
 
-        $retorno = $conexao->exec($update);
-        header("location: exibir.php");
+        $retorno = $connection->exec($update);
+        header('location: exibir.php');
     ?>
 </body>
 </html>

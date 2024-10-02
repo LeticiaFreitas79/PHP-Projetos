@@ -1,3 +1,5 @@
+<!--Status do Código: Funcionando-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,13 +11,13 @@
 <body>
     <?php
         include("connection.php");
-        $getEmail = $_GET["email"];
+        $getemail = $_GET["email"];
 
         if (!empty($_GET['email']))
         {
-            $query = 'SELECT * FROM usuario WHERE email = '."'$getEmail'";
+            $query = 'SELECT * FROM usuario WHERE email = '."'$getemail'";
             $retorno = $connection->query($query);
-            $dados = $retorno->fetchAll(POO::FETCH_ASSOC);
+            $dados = $retorno->fetchAll(PDO::FETCH_ASSOC);
             foreach($dados as $dado)
             {
                 $nome = $dado['nome'];

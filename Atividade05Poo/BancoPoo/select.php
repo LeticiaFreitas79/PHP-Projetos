@@ -1,3 +1,5 @@
+<!--Status do Código: em análise-->
+
 <?php
 
 include("connection.php");

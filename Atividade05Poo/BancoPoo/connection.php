@@ -1,9 +1,10 @@
-    <?php
-        $dsn = 'mysql:host=localhost;dbname=bancoLocadora';
-        $user = 'root';
-        $pass = '';
+<!--Status do Código: Em análise-->
 
-        $connection = new PDO($dsn, $user, $pass);
+<?php
+    $dsn = 'mysql:host=localhost;dbname=bancoLocadora';
+    $user = 'root';
+    $pass = '';
 
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    ?>
+    $connection = new PDO($dsn, $user, $pass);
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>

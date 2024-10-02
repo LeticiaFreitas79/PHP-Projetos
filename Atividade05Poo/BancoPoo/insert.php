@@ -1,3 +1,5 @@
+<!--Status do Código: em análise-->
+
 <?php
 include("connection.php");
 
@@ -13,5 +15,5 @@ $comando = "CREATE TABLE IF NOT EXISTS usuario(
 
 INSERT INTO usuario(nome, email, senha) 
 VALUES('$nome', '$email', '$senha')";
-$retorno = $conexao->exec($comando);
+$retorno = $connection->exec($comando);
 header('Location: exibir.php');
