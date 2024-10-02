@@ -1,5 +1,5 @@
     <?php
-        $dsn = 'mysql:host=localhost;dbname=locadora';
+        $dsn = 'mysql:host=localhost;dbname=bancoLocadora';
         $user = 'root';
         $pass = '';
 
