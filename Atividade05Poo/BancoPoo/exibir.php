@@ -14,6 +14,15 @@
         $retorno = $connection->query($select);
         $usuarios = $retorno->fetchAll(PDO::FETCH_ASSOC);
 
+        echo '
+            <a href="inserir.php">
+                <button type="button">
+                    Inserir
+                </button>
+            </a>
+        '
+
+
         foreach($usuarios as $usuario){
             echo "<br>Nome: : " . $usuario['nome'];
             echo "<br>Email: " . $usuario['email'];
