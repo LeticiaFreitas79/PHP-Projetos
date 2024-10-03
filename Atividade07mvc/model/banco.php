@@ -43,5 +43,13 @@
             $result = $this->mysqli->query("SELECT * FROM livros WHERE nome='$id'");
             return $result->fetch_array(MYSQLI_ASSOC);
         }
+
+        public function deleteLivro($id)
+        {
+            if($this->mysqli->query("DELETE FROM 'livros' WHERE 'nome' ='".$id."';")==TRUE)
+            {
+                return true;
+            }
+        }
     }
 ?>
