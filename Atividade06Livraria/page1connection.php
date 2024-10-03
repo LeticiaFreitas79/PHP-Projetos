@@ -16,5 +16,6 @@
         die("Connection failed: ".$conn -> connect_error); //Caso a conexão falhe.
     }
 
-    //teste salvamento de arquivos
+    //teste salvamento de arquivos. 
+    //Teste dois
     ?>
