@@ -3,7 +3,7 @@
 <?php
     $servername = "localhost"; //Nome do Servidor.
     $username = "root"; //Nome do Usuário.
-    $password = ""; //Senha do Usuário.
+    $password = "usbw"; //Senha do Usuário.
     $dbname = "banco_livraria"; //Nome do Banco de Dados.
 
     //Criar Conexão
@@ -15,8 +15,4 @@
     {
         die("Connection failed: ".$conn -> connect_error); //Caso a conexão falhe.
     }
-
-    //teste salvamento de arquivos. 
-    //Teste dois
-    //Teste três
     ?>
