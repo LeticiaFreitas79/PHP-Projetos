@@ -14,7 +14,7 @@
         //Seleciona as informações da tabela de 'produtos' no Banco de Dados através de um comando MySQL.
         $sql = "SELECT * FROM produtos ORDER BY id DESC"; //Seleciona todos os itens da tabela, a partir do ID ordena do maior para o menor.
         //'SELECT count(*) FROM produtos ORDER BY id DESC;' Conta a quantidade de registros na tabela indicada.
-        $resultado = $conn -> query($sql) //A váriavel '$resultado' irá receber e armazenar o resultado do comando acima. Este comando tmabém serve para executar o comando MySQL.
+        $resultado = $conn -> query($sql); //A váriavel '$resultado' irá receber e armazenar o resultado do comando acima. Este comando tmabém serve para executar o comando MySQL.
 
     ?> <!--Fecha o código PHP-->
 
