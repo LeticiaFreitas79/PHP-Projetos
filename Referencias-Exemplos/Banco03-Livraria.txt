@@ -1,0 +1,29 @@
+CREATE DATABASE banco_livraria;
+USE banco_livraria;
+
+CREATE TABLE produtos(
+id int(5) not null auto_increment,
+nome varchar(70) not null,
+autor varchar(25) not null,
+sinopse varchar(120) not null,
+genero varchar(15) not null,
+editora varchar(30) not null,
+lancamento int(4) not null,
+classificacao varchar(10) not null,
+quantidade_estoque int (4) not null,
+valor decimal(5,2) not null,
+primary key(id)
+);
+
+
+INSERT INTO produtos (nome, autor, sinopse, genero, editora, lancamento, classificacao, quantidade_estoque, valor) VALUES
+('O Alquimista', 'Paulo Coelho', 'Uma jornada de autodescoberta e busca por sonhos.', 'Ficção', 'HarperCollins', 1988, '10+', 10, 39.90),
+('1984', 'George Orwell', 'Uma distopia sobre um futuro totalitário.', 'Ficção Científica', 'Companhia das Letras', 1949, '14+', 8, 34.90),
+('Dom Casmurro', 'Machado de Assis', 'Um romance sobre ciúmes e memória.', 'Romance', 'Nova Fronteira', 1900, '12+', 15, 49.90),
+('A Menina que Roubava Livros', 'Markus Zusak', 'A história de uma menina durante a Segunda Guerra Mundial.', 'Ficção', 'Editora Intrínseca', 2005, '12+', 12, 44.90),
+('Cem Anos de Solidão', 'Gabriel García Márquez', 'A saga da família Buendía em Macondo.', 'Realismo Mágico', 'Editora Record', 1967, '16+', 5, 59.90),
+('O Senhor dos Anéis', 'J.R.R. Tolkien', 'Uma épica jornada pela Terra Média.', 'Fantasia', 'Martins Fontes', 1954, '12+', 7, 89.90),
+('A Revolução dos Bichos', 'George Orwell', 'Uma alegoria sobre a Revolução Russa.', 'Ficção', 'Companhia das Letras', 1945, '14+', 20, 29.90),
+('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 'As aventuras de um jovem bruxo na Escola de Magia.', 'Fantasia', 'Rocco', 1997, '10+', 30, 69.90),
+('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'Um conto poético sobre amizade e amor.', 'Infantil', 'Agir', 1943, 'Livre', 25, 24.90),
+('Moby Dick', 'Herman Melville', 'A obsessão de um capitão em caçar uma baleia gigante.', 'Aventura', 'Martin Claret', 1851, '14+', 3, 54.90);
