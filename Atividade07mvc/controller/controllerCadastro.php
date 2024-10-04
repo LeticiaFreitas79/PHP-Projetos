@@ -4,7 +4,7 @@
     class cadastroController
     {
 
-        private $cadastro
+        private $cadastro;
         public function __construct()
         {
             $this -> cadastro = new Cadastro();
