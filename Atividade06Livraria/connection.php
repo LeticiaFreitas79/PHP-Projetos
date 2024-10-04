@@ -1,4 +1,4 @@
-<!--Status do Código: em análise-->
+<!--Status do Código: em revisão-->
 
 <?php
     $servername = "localhost"; //Nome do Servidor.
