@@ -1,0 +1,16 @@
+INSERT INTO livros (nome, autor, quantidade_paginas, preco, flag, data) VALUES
+('O Alquimista', 'Paulo Coelho', 208, '39.90', 0, '2023-10-01'),
+('1984', 'George Orwell', 328, '29.90', 0, '2023-10-02'),
+('Dom Casmurro', 'Machado de Assis', 304, '34.90', 0, '2023-10-03'),
+('A Revolução dos Bichos', 'George Orwell', 144, '24.90', 0, '2023-10-04'),
+('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 96, '19.90', 0, '2023-10-05'),
+('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 223, '49.90', 0, '2023-10-06'),
+('O Senhor dos Anéis: A Sociedade do Anel', 'J.R.R. Tolkien', 423, '59.90', 0, '2023-10-07'),
+('Cem Anos de Solidão', 'Gabriel García Márquez', 417, '44.90', 0, '2023-10-08'),
+('A Metamorfose', 'Franz Kafka', 120, '29.90', 0, '2023-10-09'),
+('O Morro dos Ventos Uivantes', 'Emily Brontë', 416, '39.90', 0, '2023-10-10'),
+('A Menina que Roubava Livros', 'Markus Zusak', 552, '34.90', 0, '2023-10-11'),
+('Orgulho e Preconceito', 'Jane Austen', 279, '29.90', 0, '2023-10-12'),
+('O Sol é para Todos', 'Harper Lee', 281, '24.90', 0, '2023-10-13'),
+('A Sombra do Vento', 'Carlos Ruiz Zafón', 487, '39.90', 0, '2023-10-14'),
+('A Casa dos Espíritos', 'Isabel Allende', 448, '49.90', 0, '2023-10-15');
