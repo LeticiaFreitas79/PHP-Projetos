@@ -51,7 +51,7 @@
                 return true;
             }
         }
-        public function updateLivro {$nome,$autor,$quantidade,$preco,$flag,$data,$id}
+        public function updateLivro ($nome,$autor,$quantidade,$preco,$flag,$data,$id)
         {
             $stmt = $this->mysqli->prepare("UPDATE `livros` SET `nome` = ?, `autor` = ?, `quantidade` = ?, `preco` = ?, `flag` = ?, `data` = ? WHERE `nome` = ?");
             $stmt -> bind_param ("sssssss",$nome,$autor,$quantidade,$preco,$flag,$data,$id);
