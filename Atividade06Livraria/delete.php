@@ -5,5 +5,5 @@
 
     $delete = "DELETE FROM produtos WHERE id = 'item de reconhecimento'";
     $retorno = $connection->exec($delete);
-    header('Location: page5delete.php');
+    header('Location: delete.php');
 ?>

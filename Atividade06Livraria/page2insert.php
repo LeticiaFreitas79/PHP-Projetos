@@ -30,10 +30,18 @@
     </style>
 </head>
 <body>
+    <?php
+        include('connection.php'); //faz a conexão com o banco de dados.
+
+
+
+
+    ?>
+
     <!--Exibe campos em branco para inserir as informações sobre os livros-->
     <div class = inserir>
         <h1>NOVO LIVRO</h1>
-        <form action="insert.php" method="POST">
+        <form action="page2insert.php" method="POST">
             Nome: <input type="text" name="nome"><br>
             Autor: <input type="text" name="autor"><br>
             Sinopse: <input type="text" name="sinopse"><br>
@@ -43,7 +51,8 @@
             Classificação Indicativa: <input type="text" name="classificacao"><br>
             Quantidade em Estoque: <input type="text" name="quantidade_estoque"><br>
             Valor Unitário: <input type="text" name="valor"><br>
-            <input type="submit" id="botao" value="Enviar"><!--Cria o botão que envia as informações para a tabela no Banco de Dados--> 
+            <input type="submit" id="botao" value="Inserir"><!--Cria o botão que envia as informações para a tabela no Banco de Dados--> 
+            <input type="submit" id="botao" value="Ver Produtos"><!--Cria um botão que envia o usuário para a página de produtos-->
         </form>
     </div>
 </body>

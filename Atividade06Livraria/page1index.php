@@ -32,22 +32,24 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             /*Alinhamente*/
             position: absolute;
-            padding: 20px;
+            padding: 25px;
+            
         }
     </style>
 </head>
 <body>
     <?php //Abre o código PHP.
         //Conecta no Banco de Dados.
-        include ("page1connection.php");
+        include ("connection.php");
 
         //Para selecionar e Exibir a Tabela 'produtos'.
-        $sql = "SELECT * FROM produtos ORDER BY id DESC"; //Seleciona e Ordena as informações da tabela 'produtos' através de um comando mysql.
+        $sql = "SELECT * FROM produtos ORDER BY id ASC"; //Seleciona e Ordena as informações da tabela 'produtos' através de um comando mysql.
         $resultado = $conn -> query($sql); //Exibe as informações conforme o comando mysql anterior.
     ?>
 
     <!--Exibe a tabela com as informações dos livros-->
     <div class="tabela_livros"><!---Define a classe do bloco-->
+        <h1>LIVROS EM ESTOQUE</h1>
         <table class="table"><!---Define a classe da tabela-->
             <thead>
                 <tr>
