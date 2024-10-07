@@ -20,9 +20,9 @@
             background-color: rgba(242, 233, 228);
             text-align: center;
             position: absolute;
-            top: 50%; 
+            /*top: 50%; 
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); */
             padding: 40px; /* Distância entre os elementos e a borda da div. */
             border-radius: 25px;
             color: rgba(34, 34, 59); /* Cor do título*/
@@ -38,7 +38,7 @@
             width: 300px;
         }
 
-        button 
+        #btnEnviar 
         {
             background-color: rgba(154, 140, 152);
             border: none;
@@ -50,7 +50,7 @@
             color: rgba(251, 248, 246);
         }
 
-        button:hover
+        #btnEnviar:hover
         {
             background-color: rgba(74, 78, 105);
             cursor: pointer;
@@ -62,23 +62,25 @@
 <body>
     <div> <!--Abre o bloco de conteúdo-->
         <h1>NOVO FILME</h1>
-        <input type="text" placeholder="Nome">
-        <br><br>
-        <input type="text" placeholder="Gênero">
-        <br><br>
-        <input type="text" placeholder="Classificação">
-        <br><br>
-        <input type="text" placeholder="Lançamento">
-        <br><br>
-        <input type="datetime" placeholder="Duração">
-        <br><br>
-        <input type="text" placeholder="Diretor">
-        <br><br>
-        <input type="text" placeholder="Produtora">
-        <br><br>
-        <input type="text" placeholder="Valor">
-        <br><br>
-        <button>Adicionar</button>
+        <form action="">
+                <input type="text" placeholder="Nome">
+                <br><br>
+                <input type="text" placeholder="Gênero">
+                <br><br>
+                <input type="text" placeholder="Classificação">
+                <br><br>
+                <input type="text" placeholder="Lançamento">
+                <br><br>
+                <input type="datetime" placeholder="Duração">
+                <br><br>
+                <input type="text" placeholder="Diretor">
+                <br><br>
+                <input type="text" placeholder="Produtora">
+                <br><br>
+                <input type="text" placeholder="Valor">
+                <br><br>
+                <input type="submit" nome="submit" id="btnEnviar">
+        </form>
     </div> <!--Fecha o bloco de conteúdo-->
 </body>
 </html>
