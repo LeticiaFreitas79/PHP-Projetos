@@ -127,7 +127,6 @@
                     <th scope="coluna4">Diretor</th>
                     <th scope="coluna4">Produtora</th>
                     <th scope="coluna4">Valor</th>
-                    <th scope="coluna4">...</th> <!--Para função de deletar e editar registros-->
                 </tr>
             </thead> <!--Fecha o cabeçalho da tabela-->
 
