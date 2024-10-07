@@ -1,3 +1,5 @@
+<!--Status do Código: em desenvolvimento-->
+
 <!DOCTYPE html>
 <html lang="pt-br"> <!--Idioma da página-->
 
@@ -60,9 +62,37 @@
 </head>
 
 <body>
+    <?php
+        include ("conexao.php"); //Conecta com o Banco de Dados.
+
+        if(!empty($_POST['filme']) && 
+        !empty($_POST['genero']) && 
+        !empty($_POST['indicacao']) && 
+        !empty($_POST['lancamento']) && 
+        !empty($_POST['duracao']) &&
+        !empty($_POST['diretor']) &&
+        !empty($_POST['produtora']) &&
+        !empty($_POST['valor'])
+        )
+        {
+            //Declarando váriaveis do código e armazenando as informações inseridas nelas nos campos da tabela no Bnaco de Dados.
+            $nomeFilme = $_POST['filme'];
+            $genero = $_POST['genero'];
+            $indicacao = $_POST['indicacao'];
+            $lancamento = $_POST['lancamento'];
+            $duracao = $_POST['duracao'];
+            $diretor = $_POST['diretor'];
+            $produtora = $_POST['produtora'];
+            $valor = $_POST['valor'];
+
+            $sql = "INSERT INTO produtos(filme, genero, indicacao, lancamento, duracao, diretor, produtora, valor) VALUES ($nomeFilme, $genero, $indicacao, $lancamento, $duracao, $diretor, $produtora, $valor)";
+            $listaFilmes = $conn -> query($sql);
+        }
+    ?>
+
     <div> <!--Abre o bloco de conteúdo-->
         <h1>NOVO FILME</h1>
-        <form action="">
+        <form action="inserir.php" method="POST">
                 <input type="text" placeholder="Nome">
                 <br><br>
                 <input type="text" placeholder="Gênero">
