@@ -1,8 +1,8 @@
 <?php
     $servername = "localhost"; //Nome do Servidor.
     $username = "root"; //Nome do Usuário.
-    $password = ""; //Senha do Usuário.
-    $dbname = "bancophp"; //Nome do Banco de Dados.
+    $password = "usbw"; //Senha do Usuário.
+    $dbname = "banco_locadora"; //Nome do Banco de Dados.
 
     //Criar Conexão
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,10 +13,4 @@
     {
         die("Connection failed: ".$conn -> connect_error); //Caso a conexão falhe.
     }
-    echo "Conectado com Sucesso.";
-        //As mensagens não são necessárias para o usuário final. Neste caso, elas estão sendo usuadas para facilitar no processo de programação.
-    echo "<br>";
-
-
-    //Teste: Realizando commit no GitHub?
-    ?>
+?>
