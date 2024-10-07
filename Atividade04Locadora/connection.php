@@ -16,4 +16,7 @@
     echo "Conectado com Sucesso.";
         //As mensagens não são necessárias para o usuário final. Neste caso, elas estão sendo usuadas para facilitar no processo de programação.
     echo "<br>";
+
+
+    //Teste: Realizando commit no GitHub?
     ?>
