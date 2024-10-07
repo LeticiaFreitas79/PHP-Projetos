@@ -1,4 +1,4 @@
-<!--Status do Código: em desenvolvimento-->
+<!--Status do Código: em correção-->
 
 <!DOCTYPE html>
 <html lang="pt-br"> <!--Idioma da página-->
@@ -85,31 +85,31 @@
             $produtora = $_POST['produtora'];
             $valor = $_POST['valor'];
 
-            $sql = "INSERT INTO produtos(filme, genero, indicacao, lancamento, duracao, diretor, produtora, valor) VALUES ($nomeFilme, $genero, $indicacao, $lancamento, $duracao, $diretor, $produtora, $valor)";
-            $listaFilmes = $conn -> query($sql);
+            $insert = "INSERT INTO produtos(filme, genero, indicacao, lancamento, duracao, diretor, produtora, valor) VALUES ('$nomeFilme', '$genero', '$indicacao', '$lancamento', '$duracao', '$diretor', '$produtora', '$valor')";
+            $listaFilmes = $conn -> query($insert);
         }
     ?>
 
     <div> <!--Abre o bloco de conteúdo-->
         <h1>NOVO FILME</h1>
         <form action="inserir.php" method="POST">
-                <input type="text" placeholder="Nome">
-                <br><br>
-                <input type="text" placeholder="Gênero">
-                <br><br>
-                <input type="text" placeholder="Classificação">
-                <br><br>
-                <input type="text" placeholder="Lançamento">
-                <br><br>
-                <input type="datetime" placeholder="Duração">
-                <br><br>
-                <input type="text" placeholder="Diretor">
-                <br><br>
-                <input type="text" placeholder="Produtora">
-                <br><br>
-                <input type="text" placeholder="Valor">
-                <br><br>
-                <input type="submit" nome="submit" id="btnEnviar">
+            <input type="text" placeholder="Nome" name="nome">
+            <br><br>
+            <input type="text" placeholder="Gênero" name="genero">
+            <br><br>
+            <input type="text" placeholder="Classificação" name="classificacao">
+            <br><br>
+            <input type="text" placeholder="Lançamento" name="lancamento">
+            <br><br>
+            <input type="text" placeholder="Duração" name="duracao">
+            <br><br>
+            <input type="text" placeholder="Diretor" name="diretor">
+            <br><br>
+            <input type="text" placeholder="Produtora" name="produtora">
+            <br><br>
+            <input type="text" placeholder="Valor" name="valor">
+            <br><br>
+            <input type="submit" nome="submit" id="btnEnviar" value="Adiconar">
         </form>
     </div> <!--Fecha o bloco de conteúdo-->
 </body>

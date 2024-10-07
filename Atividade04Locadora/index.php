@@ -1,4 +1,4 @@
-<!--Status do Código: em revisão-->
+<!--Status do Código: em correção-->
 
 <!DOCTYPE html>
 <html lang="pt-br"> <!--Idioma da página-->
@@ -19,15 +19,10 @@
         div 
         {
             background-color: rgba(242, 233, 228);
-            text-align: center;
             position: absolute;
-            /*top: 50%; 
-            left: 50%;
-            transform: translate(-50%, -50%); */
             padding: 40px; /* Distância entre os elementos e a borda da div. */
             border-radius: 25px;
             color: rgba(34, 34, 59); /* Cor do título*/
-            /* Linhas 22-23-24-25: Posicionar no centro da página. */
         }
 
         th
@@ -40,6 +35,67 @@
             background-color: rgba(201, 173, 167);
             color: rgba(34, 34, 59);
         }
+
+        table
+        {
+            text-align: center;
+        }
+
+        h1
+        {
+            text-align: center;
+        }
+
+        .btnAdd
+        {
+            background-color: rgba(154, 140, 152);
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgba(251, 248, 246);
+        }
+
+        .btnAdd:hover
+        {
+            background-color: rgba(74, 78, 105);
+            cursor: pointer;
+        }
+
+        .btnDelete
+        {
+            background-color: rgba(154, 140, 152);
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgba(251, 248, 246);
+        }
+
+        .btnDelete:hover
+        {
+            background-color: rgba(74, 78, 105);
+            cursor: pointer;
+        }
+
+        .btnUpdate
+        {
+            background-color: rgba(154, 140, 152);
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            color: rgba(251, 248, 246);
+        }
+
+        .btnUpdate:hover
+        {
+            background-color: rgba(74, 78, 105);
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -47,16 +103,18 @@
 
     <?php //Abre código PHP.
         include ("conexao.php"); //Conecta com o Banco de Dados.
-
-        //Seleciona as informações da tabela de 'produtos' no Banco de Dados através de um comando MySQL.
-        $sql = "SELECT * FROM produtos ORDER BY id ASC"; //Seleciona todos os itens da tabela, a partir do ID ordena do maior para o menor.
-        $listaFilmes = $conn -> query($sql); //A váriavel '$listaFilmes' irá receber e armazenar o resultado do comando acima. Este comando tmabém serve para executar o comando MySQL.
-
     ?> <!--Fecha o código PHP-->
 
      <!--Abre um bloco para armazenar a tabela (visualmente agradável)-->
-    <div> <!--Define a classe do bloco, facilitando a personalização-->
+    <div>
+        <h1>FILMES DISPONÍVEIS</h1>
+        <form action="inserir.php">
+            <input type="submit" class="btnAdd" name='action' value='Adicionar'>
+        </form>
+        <br>
+
         <table> <!---Abre a tabela-->
+            
             <thead> <!--Abre o cabeçalho da tabela-->
                 <tr>
                     <!--Cria o cabeçalho da tabela-->
@@ -72,24 +130,58 @@
                     <th scope="coluna4">...</th> <!--Para função de deletar e editar registros-->
                 </tr>
             </thead> <!--Fecha o cabeçalho da tabela-->
+
             <tbody> <!--Abre o 'corpo' da tabela-->
                 <!--Conteúdo da tabela-->
                 <!--Laço de repetição usando PHP para mostrar as informações puxadas do Banco de Dados.-->
                 <?php
+                     //Seleciona as informações da tabela de 'produtos' no Banco de Dados através de um comando MySQL.
+                    $select = "SELECT * FROM produtos ORDER BY id ASC"; //Seleciona todos os itens da tabela, a partir do ID ordena do maior para o menor.
+                     $listaFilmes = $conn -> query($select); //A váriavel '$listaFilmes' irá receber e armazenar o resultado do comando acima. Este comando tmabém serve para executar o comando MySQL.
                     while($dadosFilmes = mysqli_fetch_assoc($listaFilmes)) //Enquanto, O bloco de código deverá ser executado.
                     {
-                        echo "<tr>";
-                            echo "<td>".$dadosFilmes['id']."</td>";
-                            echo "<td>".$dadosFilmes['filme']."</td>";
-                            echo "<td>".$dadosFilmes['genero']."</td>";
-                            echo "<td>".$dadosFilmes['indicacao']."</td>";
-                            echo "<td>".$dadosFilmes['lancamento']."</td>";
-                            echo "<td>".$dadosFilmes['duracao']."</td>";
-                            echo "<td>".$dadosFilmes['diretor']."</td>";
-                            echo "<td>".$dadosFilmes['produtora']."</td>";
-                            echo "<td>".$dadosFilmes['valor']."</td>";
-                            echo "<td>".$dadosFilmes['id']."</td>";
-                        echo "</tr>";
+                        echo
+                        "<tr><td>".$dadosFilmes['id']."</td>
+                            <td>".$dadosFilmes['filme']."</td>
+                            <td>".$dadosFilmes['genero']."</td>
+                            <td>".$dadosFilmes['indicacao']."</td>
+                            <td>".$dadosFilmes['lancamento']."</td>
+                            <td>".$dadosFilmes['duracao']."</td>
+                            <td>".$dadosFilmes['diretor']."</td>
+                            <td>".$dadosFilmes['produtora']."</td>
+                            <td>".$dadosFilmes['valor']."</td>
+                            <td>".$dadosFilmes['id']."</td>
+
+                            <td>
+                            <form action='deletar.php' method='POST'>
+                            <input type='hidden' name='id' value='".$dadosFilmes["id"]."'>
+                            <input type='hidden' name='filme' value='".$dadosFilmes["filme"]."'>
+                            <input type='hidden' name='genero' value='".$dadosFilmes["genero"]."'>
+                            <input type='hidden' name='indicacao' value='".$dadosFilmes["indicacao"]."'>
+                            <input type='hidden' name='lancamento' value='".$dadosFilmes["lancamento"]."'>
+                            <input type='hidden' name='duracao' value='".$dadosFilmes["duracao"]."'>
+                            <input type='hidden' name='diretor' value='".$dadosFilmes["diretor"]."'>
+                            <input type='hidden' name='produtora' value='R$'.'".$dadosFilmes["produtora"]."'>
+                            <input type='hidden' name='valor' value='R$".$dadosFilmes["valor"]."'>
+                            <input type='submit' class='btnDelete'name='action' value='Deletar'>
+                            <td>
+                            </form>
+
+                            <td>
+                            <form action='atualizar.php' method='POST'>
+                            <input type='hidden' name='id' value='".$dadosFilmes["id"]."'>
+                            <input type='hidden' name='filme' value='".$dadosFilmes["filme"]."'>
+                            <input type='hidden' name='genero' value='".$dadosFilmes["genero"]."'>
+                            <input type='hidden' name='indicacao' value='".$dadosFilmes["indicacao"]."'>
+                            <input type='hidden' name='lancamento' value='".$dadosFilmes["lancamento"]."'>
+                            <input type='hidden' name='duracao' value='".$dadosFilmes["duracao"]."'>
+                            <input type='hidden' name='diretor' value='".$dadosFilmes["diretor"]."'>
+                            <input type='hidden' name='produtora' value='R$'.'".$dadosFilmes["produtora"]."'>
+                            <input type='hidden' name='valor' value='R$".$dadosFilmes["valor"]."'>
+                            <input type='submit' class='btnUpdate'name='action' value='Atualizar'>
+                            <td>
+                            </form>
+                        </tr>";
                     }
                 ?>
             </tbody> <!--Fecha o 'corpo' da tabela-->
