@@ -10,7 +10,7 @@
             $this -> delete = new Banco();
             if($this -> delete -> deleteLivro($id) == TRUE)
             {
-                echo "<script> alert ('Registro deletado com sucesso!');document.location='../view/index.php'</script>"
+                echo "<script> alert ('Registro deletado com sucesso!');document.location='../view/index.php'</script>";
             }
             else
             {
