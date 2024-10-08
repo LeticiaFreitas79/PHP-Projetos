@@ -46,32 +46,32 @@
         //Método GET
         public function getNome()
         {
-
+            return $this -> nome;
         }
 
         public function getAutor()
         {
-
+            return $this -> autor;
         }
 
         public function getQuantidade()
         {
-
+            return $this -> quantidade;
         }
 
         public function getPreco()
         {
-
+            return $this -> preco;
         }
 
         public function getFlag()
         {
-
+            return $this -> flag;
         }
 
         public function getData()
         {
-
+            return $this -> data;
         }
 
         public function incluir()

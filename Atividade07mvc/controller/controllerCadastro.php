@@ -1,9 +1,8 @@
 <?php
-    require_once("../model/cadastroLivro.php");
+    require_once("../model/cadastroLivro.php"); //
     
-    class cadastroController
+    class cadastroController //Abre a classe [...]
     {
-
         private $cadastro;
         public function __construct()
         {

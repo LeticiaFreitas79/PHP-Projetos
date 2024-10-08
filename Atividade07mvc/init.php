@@ -6,5 +6,5 @@
     define('BD_SERVIDOR','localhost');
     define('BD_USUARIO','root');
     define('BD_SENHA','usbw');
-    define('BD_BANCO','livraria');
+    define('BD_BANCO','BANCO_livrariadoug');
 ?>
