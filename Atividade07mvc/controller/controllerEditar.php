@@ -1,9 +1,10 @@
 <?php
-    require_once("../model/banco.php");
+    require_once("../model/banco.php"); //Inclui o script 'banco.php' no arquivo atual.
 
-    class editarController
+    class editarController //Define a classe 'editarController'
     {
-        private $editar;
+        //Declarando propriedades privadas usadas para armazenar dados de um livro.
+        private $editar; 
         private $nome;
         private $autor;
         private $quantidade;
@@ -12,9 +13,9 @@
         private $flag;
     }
 
-    public function __construct($id)
+    public function __construct($id) //Define o método construtor público, que recebe o '$id' como parâmetro e inicia a isntância da classe Banco.
     {
-        $this -> editar = new Banco();
+        $this -> editar = new Banco(); //
         $this -> criarFormulario($id);
     }
 
