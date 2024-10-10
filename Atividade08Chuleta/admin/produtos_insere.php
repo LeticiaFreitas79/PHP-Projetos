@@ -41,7 +41,7 @@
 ?>
 
 
-<!DOCTYP
+<!DOCTYPE
 $destaque = $_POST['destaque'];E html>
 <html lang="pt-BR">
 <head>

@@ -1,5 +1,13 @@
 <!-- CONECTAR NO BANCO E SELECIONAR AS INFORMAÇÕES -->
 
+<?php
+    include 'acesso_com.php';
+    include '../conn/connect.php';
+
+    $lista = $conn -> query("select * from produtos");
+    $row = $lista -> fecth_assoc();
+    $rows = $lista -> num_rows;
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
