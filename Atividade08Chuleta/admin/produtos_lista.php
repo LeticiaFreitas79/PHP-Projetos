@@ -41,17 +41,32 @@
             <tbody> <!-- início corpo da tabela -->
            	        <!-- início estrutura repetição -->
                 <!-- COMEÇO DO LAÇO -->
+                <?php do { ?>
                     <tr>
                         <td class="hidden">
                             <!-- ID -->
+                            <?php echo $row['id']; ?>
                         </td>
                         <td>
                             <!-- RÓTULO -->
+                            <?php echo $row['rotolo']; ?>
                             <span class="visible-xs"></span>
                             <span class="hidden-xs"></span>
                         </td>
                         <td>
                             <!-- INFORMAÇÃO -->
+                            <?php
+                                if ($row['destaque'] == 'Sim')
+                                {
+                                    echo '<span class = "glyphiconglyphicon-star text-danger" aria-hidden="true"></span>';
+                                }
+                                else
+                                {
+                                    echo '<span class = "glyphiconglyphicon-star text-danger" aria-hidden="true"></span>';    
+                                }
+                                echo '&nbsp;';
+                                echo $row['descricao'];
+                            ?>
                         </td>
                         <td>
                             <?php echo $row['resumo']; ?>
@@ -91,6 +106,7 @@
                         </td>
                     </tr>    
                 <!-- FIM DO LAÇO -->  
+                <?php } while ($row = $lista -> fetch_assoc()); ?>
             </tbody><!-- final corpo da tabela -->
         </table>
     </main>
