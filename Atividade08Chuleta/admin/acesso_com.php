@@ -19,6 +19,6 @@
     if(!isset($_SESSION['nome_da_sessao']) or ($_SESSION['nome_da_sessao'] !=$nome_da_sessao))
     {
         session_destroy();
-        header('location: login.php')
+        header('location: login.php');
     }
 ?>

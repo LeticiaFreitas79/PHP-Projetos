@@ -2,7 +2,7 @@
 <?php
     include 'conn/connect.php';
     $idTipo = $_GET['id_tipo'];
-    $rotulo = $_GET['id_rotulo'];
+    $rotulo = $_GET['rotulo'];
     $listaPorTipo = $conn -> query ('select * from produtos where tipo_id ='.$idTipo);
     $rowPorTipo = $listaPorTipo -> fetch_assoc();
     $numLinhas = $listaPorTipo -> num_rows;

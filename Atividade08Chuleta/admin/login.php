@@ -35,7 +35,7 @@
         }
         else
         {
-            echo "<script> window.open ('invasor.php', '_self') </script>"
+            echo "<script> window.open ('invasor.php', '_self') </script>";
         }
     }
 ?>
