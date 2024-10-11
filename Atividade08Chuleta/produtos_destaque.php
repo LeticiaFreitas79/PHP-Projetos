@@ -68,5 +68,12 @@
                 
             </div>
         <!-- FIM DO LAÇO -->
+        <?php
+            }
+            while ($row_produtos = $lista -> fetch_assoc());
+        ?>
     </div>
+    <?php
+    }
+    ?>
 
