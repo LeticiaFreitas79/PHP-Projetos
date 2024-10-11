@@ -1,4 +1,11 @@
 <!-- CONECTAR COM O BANCO E SELECIONAR AS INFORMAÇÕES -->
+<?php
+    include "conn/connect.php"; //conecta banco.
+    $busca = $_GET['buscar'];
+    $listaBusca = $conn -> querry ("select * from produtos where descrição like '%$busca%' or resumo like '%$busca%' order by descricao asc");
+    $rowBusca = $listBusca -> fetch_assoc();
+    $numLinhas = $listaBusca -> num_rows;
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
