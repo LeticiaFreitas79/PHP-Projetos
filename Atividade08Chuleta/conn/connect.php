@@ -14,6 +14,6 @@
 
     catch (Throwable $th)
     {
-        die("Atenção rolou um erro, cara!" .$th);
+        die("Atenção rolou um erro!" .$th);
     }
 ?>
