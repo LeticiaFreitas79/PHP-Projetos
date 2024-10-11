@@ -1,4 +1,13 @@
 <!-- CONECTAR COM O BANCO E SELECIONAR AS INFORMAÇÕES -->
+<?php
+    include 'conn/connect.php'; //arquivo de conexão de banco.
+
+    //consulta para trazer os dados se filtrar.
+    $id = $_GET['id'];
+    $listaDestaque = $conn -> query("select * from produtos where id = $id");
+    $linhaDestaque = $listaDestaque -> fetch_assoc();
+    $numLinhasDestaques = $listaDestaque -> num_rows;
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
