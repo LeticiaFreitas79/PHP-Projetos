@@ -15,13 +15,14 @@
 
     public function __construct($id) //Define o método construtor público, que recebe o '$id' como parâmetro e inicia a isntância da classe Banco.
     {
-        $this -> editar = new Banco(); //
-        $this -> criarFormulario($id);
+        $this -> editar = new Banco(); //Cria uma nova instância da classe e a armazena na propriedade '$editar'. Permite que a classe interaja com o Banco.
+        $this -> criarFormulario($id); //Chama o método que busca os dados do livro correspondente ao ID.
     }
 
-    private function criarFormulario($id)
+    private function criarFormulario($id) //Método privado que recebe o ID como parâmetro para buscar os dados do livro.
     {
-        $row = $this -> editar -> pesquisarLivro($id);
+        $row = $this -> editar -> pesquisarLivro($id); //Chama o método que passa o ID para buscar os dados do livro. Os dados são armazenados na váriavel '$row'.
+        //Propriedades da classe preenchidas com os valores retornados na váriavel '$row' com os dados do livro.
         $this -> nome = $row ['nome'];
         $this -> autor = $row ['autor'];
         $this -> quantidade = $row ['quantidade'];
@@ -30,52 +31,57 @@
         $this -> flag = $row ['flag'];
     }
 
+    //Define o método pùblico 'editarFormulario' que recebe os novos dados do livro e o ID para atualizar o registro.
     public function editarFormulario($nome,$autor,$quantidade,$preco,$data,$flag,$id)
     {
+        //Verifica se a atualização do livro no Banco de Dados foi bem-sucedida. O método 'updateLivro' da classe é chamado com os dados fornecidos.
         if($this -> editar -> updateLivro($nome,$autor,$quantidade,$preco,$data,$flag,$id) == TRUE)
         {
+            //Mensagem caso a operação seja bem-sucedida.
             echo "<script> alert ('Registro incluido com sucesso!'); document.location = '../view/index.php' </script>";
         }
-        else
+        else //caso a atualização falhar.
         {
+            //Mensagem caso a operação não seja bem-sucedida.
             echo "<script> alert ('Erro ao gravar registro!');history.back()</script>";
         }
     }
 
-    public function getNome()
+    public function getNome() //Definição do método público.
     {
-        return $this -> nome;
+        return $this -> nome; //Retorna o valor da propriedade.
     }
 
-    public function getAutor()
+    public function getAutor() //Definição do método público.
     {
-        return $this -> autor;
+        return $this -> autor; //Retorna o valor da propriedade.
     }
 
-    public function getQuantidade()
+    public function getQuantidade() //Definição do método público.
     {
-        return $this -> quantidade;
+        return $this -> quantidade; //Retorna o valor da propriedade.
     }
 
-    public function getPreco()
+    public function getPreco() //Definição do método público.
     {
-        return $this -> preco;
+        return $this -> preco; //Retorna o valor da propriedade.
     }
 
-    public function getData()
+    public function getData() //Definição do método público.
     {
-        return $this -> data;
+        return $this -> data; //Retorna o valor da propriedade.
     }
 
-    public function getFlag()
+    public function getFlag() //Definição do método público.
     {
-        return $this -> flag;
+        return $this -> flag; //Retorna o valor da propriedade.
     }
 
-    $id = filter_input(INPUT_GET, 'id');
-    $editar = new editarController($id);
-    if(isset($_POST['submit']))
+    $id = filter_input(INPUT_GET, 'id'); //Recupera o valor do parâmetro 'id' da URL e aplica 'filter_input' para sanitização, garantindo que o valor seja seguro para uso. 
+    $editar = new editarController($id); //Inicia o processo de edição do livro.
+    if(isset($_POST['submit'])) //Verifica se o formulário foi submetido.
     {
+        //Se o formulário foi submetido, chama o método editarFormulario da instância editarController, passando os dados do formulário.
         $editar -> editarFormulario($_POST['nome'], $_POST['autor'], $_POST['quantidade'], $_POST['preco'], $_POST['data'], $_POST['flag'], $_POST['id']);
     }
 ?>
