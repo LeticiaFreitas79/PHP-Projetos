@@ -107,7 +107,7 @@
                     </tr>    
                 <!-- FIM DO LAÇO -->  
                 <?php } while ($row = $lista -> fetch_assoc()); ?>
-            </tbody><!-- final corpo da tabela -->
+            </tbody> <!-- final corpo da tabela -->
         </table>
     </main>
     <!-- inicio do modal para excluir... -->

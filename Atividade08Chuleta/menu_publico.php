@@ -1,5 +1,11 @@
 <!-- CONECTAR NO BANCO E SELECIONAR AS INFORMAÇÕES -->
 
+<?php
+    include "conn/connect.php";
+    $lista_tipos = $conn -> query('select * from tipos order by rotulo');
+    $rows_tipos = $lista_tipos -> fetch_all();
+?>
+
     <!-- BOOTSTRAP -->
     <!-- abre a barra de navegação -->  
      
