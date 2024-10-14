@@ -6,7 +6,7 @@
     if($_POST)
     {
         $login = $_POST['login'];
-        $senha = md5($_POST['senha']);
+        $senha = ($_POST['senha']);
         $loginRes = $conn -> query ("select * from usuarios where login = '$login' and senha = '$senha'");
         $rowLogin = $loginRes -> fetch_assoc();
         $numRow = $loginRes -> num_rows;
