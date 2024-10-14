@@ -1,7 +1,7 @@
 <!-- CONECTAR NO BANCO E SELECIONAR AS INFORMAÇÕES -->
 <?php
     include 'conn/connect.php';
-    $lista = $conn -> query ("select * from produtos");
+    $lista = $conn -> query ("select * from vw_produtos");
     $row_produtos = $lista -> fetch_assoc();
     $num_linhas = $lista -> num_rows;
 ?>
@@ -45,7 +45,7 @@
                         <strong><?php echo $row_produtos['rotulo']?></strong>
                     </p>
                     <p class="text-left">
-                        <?php echo mb_strimwidth($row_produtos['resumo'],o,42,'...'); ?>
+                        <?php echo mb_strimwidth($row_produtos['resumo'],0,42,'...'); ?>
                         
                     </p>
                     <p>
