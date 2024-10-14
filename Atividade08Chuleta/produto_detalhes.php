@@ -3,7 +3,7 @@
 
     //consulta para trazer os dados se filtrar.
     $id = $_GET['id'];
-    $listaDestaque = $conn -> query("select * from produtos where id = $id");
+    $listaDestaque = $conn -> query("select * from vw_produtos where id = $id");
     $linhaDestaque = $listaDestaque -> fetch_assoc();
     $numLinhasDestaques = $listaDestaque -> num_rows;
 ?>
@@ -27,18 +27,15 @@
                 <button class="btn btn-danger">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </button>
-                <!-- use a tag ROGER -->
                 <strong>Detalhes do Produto</strong>
             </a>
         </h2>
 
         <div class="row">
-            <!-- COMEÇO DO LAÇO PARA REPETIR AS INFORMAÇÕES -->
             <?php
                 do
                 { 
             ?>
-
                 <div class="col-sm-12 col-md-12">
                     <div class="thumbnail ">
                         <a href="">
@@ -50,10 +47,10 @@
                         </a>
                         <div class="caption text-center">
                             <h3 class="text-danger">
-                                <strong><?php echo $linhaDestaque['destaque']?></strong>
+                                <strong><?php echo $linhaDestaque['descricao']?></strong>
                             </h3>
                             <p class="text-warning">
-                                <strong><?php echo $linhaDestaque['rotulo']?></strong>
+                                <strong><?php echo $linhaDestaque['rotulo'] ?></strong>
                             </p>
                             <p class="text-center">
                                 <strong><?php echo $linhaDestaque['resumo']?></strong>
@@ -68,10 +65,9 @@
                     </div>
                 </div>    
                 
-            <!-- FIM DO LAÇO PARA REPETIR AS INFORMAÇÕES    -->
             <?php
             }
-                while ($linhaDestaque = $linhaDestaque -> fetch_assoc());
+                while ($linhaDestaque = $listaDestaque -> fetch_assoc());
             ?>
         </div>
     </div>

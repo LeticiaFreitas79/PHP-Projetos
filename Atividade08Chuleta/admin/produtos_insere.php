@@ -1,8 +1,8 @@
-<!-- CONECTAR COM O BANCO E SELECIONAR AS INFORMAÇÕES -->
+<!--Status do Código: Em desenvolvimento-->
 
 <?php
-    include 'acesso_com.php';
-    include '../conn/connect.php';
+    include 'acesso_com.php'; //Conecta com o arquivo de acesso por sessão.
+    include '../conn/connect.php'; //Conecta com o Banco de Dados.
 
     if($_POST)
     {
@@ -75,10 +75,11 @@ $destaque = $_POST['destaque'];E html>
                                 <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                             </span>
                             <select name="id_tipo" id="id_tipo" class="form-control" required>
-                                <!-- COMEÇO DO LAÇO -->
-                                    
-                                
-                                <!-- FIM DO LAÇO -->
+                                <?php do{ ?>
+                                    <option value="<?php echo $rowTipo['id']; ?>">
+                                    <?php echo $rowTipo['rotulo']; ?>
+                                    </option>
+                                <?php }while($rowTipo = $listaTipo->fetch_assoc()); ?>
                             </select>
                         </div>
                         <label for="destaque">Destaque:</label>

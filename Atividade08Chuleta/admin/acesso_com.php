@@ -6,7 +6,6 @@
     }
 
     //segurança digital
-
     //verificar se o usuário está logado na sessão.
     if(!isset($_SESSIO['login_usuario']))
     {
