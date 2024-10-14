@@ -4,8 +4,8 @@
     include 'acesso_com.php';
     include '../conn/connect.php';
 
-    $lista = $conn -> query("select * from produtos");
-    $row = $lista -> fecth_assoc();
+    $lista = $conn -> query("select * from vw_produtos");
+    $row = $lista -> fetch_assoc();
     $rows = $lista -> num_rows;
 ?>
 
@@ -49,7 +49,7 @@
                         </td>
                         <td>
                             <!-- RÓTULO -->
-                            <?php echo $row['rotolo']; ?>
+                            <?php echo $row['rotulo']; ?>
                             <span class="visible-xs"></span>
                             <span class="hidden-xs"></span>
                         </td>
@@ -58,11 +58,11 @@
                             <?php
                                 if ($row['destaque'] == 'Sim')
                                 {
-                                    echo '<span class = "glyphiconglyphicon-star text-danger" aria-hidden="true"></span>';
+                                    echo '<span class = "glyphicon glyphicon-star text-danger" aria-hidden="true"></span>';
                                 }
                                 else
                                 {
-                                    echo '<span class = "glyphiconglyphicon-star text-danger" aria-hidden="true"></span>';    
+                                    echo '<span class = "glyphicon glyphicon-ok text-success" aria-hidden="true"></span>';    
                                 }
                                 echo '&nbsp;';
                                 echo $row['descricao'];
