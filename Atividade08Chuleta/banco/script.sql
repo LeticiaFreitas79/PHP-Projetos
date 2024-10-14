@@ -72,7 +72,7 @@ INSERT INTO `usuarios`
 		(1, 'senac', md5('1234'), 'sup'),
 		(2, 'joao', md5('456'), 'com'),
 		(3, 'maria', md5('789'), 'com'),
-		(4, 'well', md5('1234'), 'sup');
+		(4, 'well', md5('345'), 'sup');
 
 -- Índices de tabela `tipos`
 ALTER TABLE `usuarios`

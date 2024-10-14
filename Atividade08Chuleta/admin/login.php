@@ -6,7 +6,7 @@
     if($_POST)
     {
         $login = $_POST['login'];
-        $senha = $_POST['senha'];
+        $senha = md5($_POST['senha']);
         $loginRes = $conn -> query ("select * from usuarios where login = '$login' and senha = '$senha'");
         $rowLogin = $loginRes -> fetch_assoc();
         $numRow = $loginRes -> num_rows;
@@ -23,7 +23,7 @@
         {
             $_SESSION['login_usuario'] = $login;
             $_SESSION['nivel_usuario'] = $rowLogin['nivel'];
-            $_SESSION['noma_da_sessao'] = session_name();
+            $_SESSION['nom_da_sessao'] = session_name();
             if ($rowLogin['nivel'] == 'sup')
             {
                 echo "<script> window.open('index.php','_self') </script>";
