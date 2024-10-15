@@ -1,5 +1,14 @@
 <!-- CONECTAR NO BANCO E SELECIONAR AS INFORMAÇÕES -->
 
+<!--Nota 'tipos de produtos'
+    - churrasco
+    - sobremesa
+    - massas
+    - refeições
+    - bebidas
+    - petiscos
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
