@@ -1,3 +1,5 @@
+<!--Status do Código: Finalizado e Comentado-->
+
 <!DOCTYPE html>
 <html lang="pt-br"> <!--Idioma da página-->
 <head>

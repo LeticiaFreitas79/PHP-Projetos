@@ -1,3 +1,5 @@
+<!--Status do Código: Finalizado e Comentado-->
+
 <?php
     require_once("../model/cadastroLivro.php"); //Inclui o arquivo 'cadastroLivro' no script atual.
     

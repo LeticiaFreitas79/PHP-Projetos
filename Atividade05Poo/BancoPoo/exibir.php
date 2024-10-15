@@ -1,4 +1,4 @@
-<!--Status do Código: em anaálise-->
+<!--Status do Código: em análise-->
 
 <!DOCTYPE html>
 <html lang="pt-br">

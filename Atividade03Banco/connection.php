@@ -1,3 +1,5 @@
+<!--Status do Código: Finalizado e Comentado-->
+
 <?php
     $servername = "localhost"; //Nome do Servidor.
     $username = "root"; //Nome do Usuário.

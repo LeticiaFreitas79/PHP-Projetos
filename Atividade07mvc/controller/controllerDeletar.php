@@ -1,3 +1,5 @@
+<!--Status do Código: Finalizado e Comentado-->
+
 <?php
     require_once("../model/banco.php"); //Inclui o arquivo 'banco.php' ao script atual.
 

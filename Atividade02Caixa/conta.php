@@ -1,3 +1,5 @@
+<!--Status do Código: Finalizado-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,8 +12,6 @@
    <?php
         echo "Bem Vindo(a) a sua conta, $usuario!"
         echo "Seu saldo é: $saldo"
-
    ?>
-    
 </body>
 </html>
