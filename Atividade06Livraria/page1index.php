@@ -1,4 +1,4 @@
-<!--Status do Código: em análise-->
+<!--Status do Código: em análise, mas comentado-->
 
 <!--
     Objetivo: Criar um código de controle de estoque de uma Livraria. 

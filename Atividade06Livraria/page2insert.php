@@ -30,12 +30,9 @@
     </style>
 </head>
 <body>
+    
     <?php
         include('connection.php'); //faz a conexão com o banco de dados.
-
-
-
-
     ?>
 
     <!--Exibe campos em branco para inserir as informações sobre os livros-->
