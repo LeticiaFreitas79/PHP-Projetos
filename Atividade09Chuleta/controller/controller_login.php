@@ -12,7 +12,7 @@
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="../css/estilo.css" type="text/css">
     
-    <title>Chuleta Quente - Login</title>
+    <title>Chuleta Quente | Login</title>
 </head>
 
 <body>
