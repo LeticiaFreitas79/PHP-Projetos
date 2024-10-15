@@ -1,20 +1,25 @@
-<?php
-    require_once("../init.php");
-    class Banco
-    {
-        protected $mysqli;
+<!--Status do Código: Em desenvolvimento-->
 
-        public function __construct()
+<?php
+    require_once("../init.php"); //Garante que o arquivo de conexão seja incluído apenas uma vez.
+    
+    class Banco //Nova classe.
+    {
+        protected $mysqli; //Propriedade protegida, usada para armazenar a conexão com o Banco de Dados.
+            //O modificador protected permite que esta propriedade seja acessada apenas dentro da classe Banco e suas subclasses.
+
+        public function __construct() //Método construtor da classe.
         {
-            $this->conexao();
+            $this->conexao(); //Chama o método conexao dentro do construtor para estabelecer a conexão com o banco de dados quando um objeto da classe Banco é criado.
         }
 
-        private function conexao()
+        private function conexao() //Método privado, responsável por estabelecer a conexão com o Banco de Dados.
         {
             $this->mysqli = new mysqli(BD_SERVIDOR, BD_USUARIO, BD_SENHA, BD_BANCO);
+                //Cria uma nova instância da classe mysqli, passando constantes para estabelecer a conexão. O resultado é armazenado na propriedade $mysqli.
         }
 
-        public function setLivro ($nome, $autor, $quantidade, $preco, $data)
+        public function setLivro ($nome, $autor, $quantidade, $preco, $data) //Método público que recebe os dados e os insere no Banco.
         {
             $stmt = $this->mysqli->prepare("INSERT INTO livros ('nome', 'autor', 'quantidade', 'preco', 'data') VALUES (?,?,?,?,?)");
             $stmt->bind_param("sssss",$nome,$autor,$quantidade,$preco,$data);

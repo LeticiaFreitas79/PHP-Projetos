@@ -1,3 +1,5 @@
+<!--Status do Código: Finalizado-->
+
 <?php
     //timezone
     date_default_timezone_set('America/Sao_Paulo');
