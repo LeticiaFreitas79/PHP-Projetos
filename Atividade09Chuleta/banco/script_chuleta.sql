@@ -5,7 +5,7 @@ CREATE DATABASE
     
 USE `banco_chuleta`;
 
--- --------------------------------------------------------
+
 -- Estrutura da tabela `produtos`
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
