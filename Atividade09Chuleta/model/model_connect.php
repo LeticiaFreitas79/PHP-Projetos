@@ -2,9 +2,9 @@
     $host = "localhost";
     $database = "banco_chuleta";
     $user = "root";
-    $pass = "";
+    $pass = "usbw";
     $charset = "utf8";
-    $port = "3306";
+    //$port = "3306";
 
     try
     {

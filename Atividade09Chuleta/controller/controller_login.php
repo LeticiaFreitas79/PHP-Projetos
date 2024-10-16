@@ -1,4 +1,6 @@
-<!-- CONECTAR COM O BANCO E SELECIONAR AS INFORMAÇÕES -->
+<?php
+    include_once ("../model/model_connect.php");
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -9,9 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
-    <!-- Link para CSS específico -->
-    <link rel="stylesheet" href="../css/estilo.css" type="text/css">
-    
+    <link rel="stylesheet" href="../css/estilo.css" type="text/css">  <!--CSS-->
     <title>Chuleta Quente | Login</title>
 </head>
 

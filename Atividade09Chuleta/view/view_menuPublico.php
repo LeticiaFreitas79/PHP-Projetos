@@ -1,11 +1,15 @@
-<!-- CONECTAR NO BANCO E SELECIONAR AS INFORMAÇÕES -->
+<?php
+   // include (".../model/model_connect.php"); //Conecta com o Banco de Dados.
+   // $lista_tipos = $conn -> query('select * from tipos order by rotulo'); //Seleciona
+   // $rows_tipos = $lista_tipos -> fetch_all();
+?>
 
     <!-- BOOTSTRAP -->
-    <!-- abre a barra de navegação -->  
-     
+
+    <!--abre a barra de navegação-->  
     <nav class="navbar navbar-expanded-md navbar-fixed-top navbar-light navbar-inverse">
         <div class="container-fluid">
-            <!-- agrupamento Mobile -->
+            <!--agrupamento Mobile-->
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menupublico" aria-expanded="false">
                    <span class="sr-only">Toggle Navigation</span>
