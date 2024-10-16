@@ -1,5 +1,5 @@
 <!--Objetivo do Código: Esta página deve ser aberta quando o Login for efetuado com sucesso.-->
-<!--Status do Código: Em correção; o nome do cliente não está sendo puxado pelo GET-->
+<!--Status do Código: Concluído-->
 
 <?php 
    include "../model/model_acesso.php";
