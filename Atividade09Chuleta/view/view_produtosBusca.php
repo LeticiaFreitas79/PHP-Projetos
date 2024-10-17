@@ -1,4 +1,9 @@
-<!-- CONECTAR COM O BANCO E SELECIONAR AS INFORMAÇÕES -->
+<!--Objetivo do Código: Exibir o menu superior nas Páginas Principais-->
+<!--Status do Código: Concluído e Comentado-->
+
+<?php
+   include ("../model/model_connect.php"); //Conecta com o Banco de Dados.
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,7 +15,7 @@
     <title>Busca por palavra | Chuleta Quente</title>
 </head>
 <body class="fundofixo">
-    <?php include "menu_publico.php" ?>
+    <?php include "view_menuPublico.php" ?>
     <div class="container">
         <!-- monstrar se a consulta retornar vazio -->
         <!-- COMEÇO DA VERIFICAÇÃO  -->

@@ -1,3 +1,6 @@
+<!--Objetivo do Código: -->
+<!--Status do Código: -->
+
 <?php
     include_once ("../model/model_connect.php");
 ?>

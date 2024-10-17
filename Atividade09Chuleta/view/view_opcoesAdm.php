@@ -1,84 +1,86 @@
+<!--Objetivo do Código: Mostrar as opções de listar e inserir produtos, categorias e usuários-->
+<!--Status do Código: Em análise-->
+
+<?php
+   include ("../view/view_menuAdm.php");
+?>
+
 <main class="container">
 <h1 class="breadcrumb">Área Administrativa</h1>
-<div class="row"><!-- manter os elementos na linha -->
+<div class="row"> <!--Manter os elementos na linha-->
 
-<!-- ADM PRODUTOS -->
+<!--Produtos-->
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail alert-danger">
-        <img src="../imagens/icone_produtos.png" alt="">
-        <br>
+        <img src="../view_img/icon_produtos.png" alt=""> <!--Icon-->
+        <br> <!--Pular linha-->
         <div class="alert-danger">
 
-            <div class="btn-group btn-group-justified" role="group">
+        <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group">
+                <button class="btn btn-default disabled" role="alert" style="cursor: default;">
+                    PRODUTOS
+                </button>
+            </div>
+        </div>
+        <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group">
+                <a href="controller_produtosListar.php">
+                    <button class="btn btn-danger">
+                        LISTAR
+                   </button>
+                </a>
+            </div>
                 <div class="btn-group">
-                    <button class="btn btn-default disabled" role="alert" style="cursor: default;">
-                        PRODUTOS
-                    </button>
-                </div><!-- fecha btn-group -->
-            </div><!-- fecha btn-group-justified -->
-
-            <div class="btn-group btn-group-justified" role="group">
-                <div class="btn-group">
-                    <a href="produtos_lista.php">
-                        <button class="btn btn-danger">
-                            LISTAR
-                        </button>
-                    </a>
-                </div><!-- fecha btn-group -->
-                <div class="btn-group">
-                    <a href="produtos_insere.php">
+                    <a href="controller_produtosInserir.php">
                         <button class="btn btn-danger">
                             INSERIR
                         </button>
                     </a>
-                </div><!-- fecha btn-group -->
-            </div><!-- fecha btn-group-justified -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        </div><!-- fecha alert-danger -->
-    </div><!-- fecha thumbnail -->
-</div><!-- fecha col -->
-<!-- fecha ADM PRODUTOS -->
-
-<!-- ADM TIPOS -->
+<!--Categorias -->
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail alert-warning">
-        <img src="../imagens/icone_tipos.png" alt="">
+        <img src="../view_img/icon_tipos.png" alt="">
         <br>
         <div class="alert-warning">
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
                     <button class="btn btn-default disabled" role="alert" style="cursor: default;">
-                        TIPOS
+                        CATEGORIAS
                     </button>
-                </div><!-- fecha btn-group -->
-            </div><!-- fecha btn-group-justified -->
+                </div>
+            </div>
 
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
-                    <a href="tipos_lista.php">
+                    <a href="controller_categoriasInserir.php">
                         <button class="btn btn-warning">
                             LISTAR
                         </button>
                     </a>
-                </div><!-- fecha btn-group -->
+                </div>
                 <div class="btn-group">
-                    <a href="tipos_insere.php">
+                    <a href="controller_categoriasInserir.php">
                         <button class="btn btn-warning">
                             INSERIR
                         </button>
                     </a>
-                </div><!-- fecha btn-group -->
-            </div><!-- fecha btn-group-justified -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        </div><!-- fecha alert-warning -->
-    </div><!-- fecha thumbnail -->
-</div><!-- fecha col -->
-<!-- fecha ADM TIPOS -->
-
-<!-- ADM USUÁRIOS -->
+<!--Usuários-->
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail alert-info">
-        <img src="../imagens/icone_user.png" alt="">
+        <img src="../view_img/icon_Usuario.png" alt="">
         <br>
         <div class="alert-info">
             <div class="btn-group btn-group-justified" role="group">
@@ -86,31 +88,27 @@
                     <button class="btn btn-default disabled" role="alert" style="cursor: default;">
                         USUÁRIOS
                     </button>
-                </div><!-- fecha btn-group -->
-            </div><!-- fecha btn-group-justified -->
+                </div>
+            </div>
 
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
-                    <a href="usuarios_lista.php">
+                    <a href="controller_usuarioListar.php">
                         <button class="btn btn-info">
                             LISTAR
                         </button>
                     </a>
-                </div><!-- fecha btn-group -->
+                </div>
                 <div class="btn-group">
-                    <a href="usuarios_insere.php">
+                    <a href="controller_usuarioInserir.php">
                         <button class="btn btn-info">
                             INSERIR
                         </button>
                     </a>
-                </div><!-- fecha btn-group -->
-            </div><!-- fecha btn-group-justified -->
-
-        </div><!-- fecha alert-warning -->
-    </div><!-- fecha thumbnail -->
-</div><!-- fecha col -->
-<!-- fecha ADM USUÁRIOS -->
-
-</div><!-- fecha row -->
-
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </main> 

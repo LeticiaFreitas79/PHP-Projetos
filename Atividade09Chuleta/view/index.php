@@ -1,5 +1,5 @@
 <!--Objetivo do Código: Página Inicial da Churrascaria. Mostra o carrosel, produtos em destaque, produtos e contato-->
-<!--Status do Código: Em correção; O estilo da página não foi aplicado-->
+<!--Status do Código: Concluído-->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -34,7 +34,7 @@
 
 <!--Bootstrap e JavaScript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
-<script src="view_js/bootstrap.min.js"></script>
+<script src="../view_js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).on('ready', function()

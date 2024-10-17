@@ -5,8 +5,6 @@
    include ("../model/model_connect.php"); //Conecta com o Banco de Dados.
 ?>
 
-    <!-- BOOTSTRAP -->
-
     <!--Abre a barra de navegação-->  
     <nav class="navbar navbar-expanded-md navbar-fixed-top navbar-light navbar-inverse">
         <div class="container-fluid">
