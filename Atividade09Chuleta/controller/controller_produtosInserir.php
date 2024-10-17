@@ -1,23 +1,59 @@
-<!-- CONECTAR COM O BANCO E SELECIONAR AS INFORMAÇÕES -->
+<!--Objetivo do Código: Inserir produtos no menu da Churrascaria-->
+<!--Status do Código: Em correção; -->
 
+<?php 
+    include 'model_acesso.php';
+    include '../model/model_connect.php';
 
+    if($_POST)
+    {
+        if(isset($_POST['enviar'])){
+            $nome_img = $_FILES['imagemfile']['name'];
+            $tmp_img = $_FILES['imagemfile']['tmp_name'];
+            $rand = rand(100001,999999);
+            $dir_img = "../view_img/".$rand.$nome_img;
+            move_uploaded_file($tmp_img,$dir_img);
+        }
+
+        $id = $_POST['id_tipo'];
+        $destaque = $_POST['destaque'];
+        $descricao = $_POST['descricao'];
+        $resumo = $_POST['resumo'];
+        $valor = $_POST['valor'];
+        $imagem =  $rand.$nome_img;
+        
+        $insereProduto = "insert produtos 
+                        (tipo_id, descricao, resumo, valor, imagem, destaque)
+                        values
+                        ($id,'$descricao', '$resumo', $valor, '$imagem', '$destaque') 
+                        ";
+        $resultado = $conn->query($insereProduto);            
+        if(mysqli_insert_id($conn)){
+            header('location:controller_produtosListas.php');
+        }
+    }
+    // selecionar a lista de tipos para preencher o <select>
+    $listaTipo = $conn->query("select * from tipos order by rotulo");
+    $rowTipo = $listaTipo->fetch_assoc();
+    $numLinhas = $listaTipo->num_rows;
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../view_css/bootstrap.min.css">
+    <link rel="stylesheet" href="../view_css/estilo.css">
     <title>Produto | Inserir</title>
 </head>
 <body>
-<?php include "menu_adm.php";?>
+<?php include "view_menuAdm.php";?>
 <main class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-offset-2 col-sm-6  col-md-8">
             <h2 class="breadcrumb text-danger">
-                <a href="produtos_lista.php">
+                <a href="controller_produtosListar.php">
                     <button class="btn btn-danger">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </button>
@@ -35,10 +71,11 @@
                                 <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                             </span>
                             <select name="id_tipo" id="id_tipo" class="form-control" required>
-                                <!-- COMEÇO DO LAÇO -->
-                                    
-                                
-                                <!-- FIM DO LAÇO -->
+                                <?php do{ ?>
+                                    <option value="<?php echo $rowTipo['id']; ?>">
+                                    <?php echo $rowTipo['rotulo']; ?>
+                                    </option>
+                                <?php }while($rowTipo = $listaTipo->fetch_assoc()); ?>
                             </select>
                         </div>
                         <label for="destaque">Destaque:</label>
